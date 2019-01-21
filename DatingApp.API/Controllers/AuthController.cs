@@ -28,7 +28,7 @@ namespace DatingApp.API.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(RegisterDto register)
+        public async Task<IActionResult> Register([FromBody] RegisterDto register)
         {
             register.username = register.username.ToLower();
 
